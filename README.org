@@ -1,0 +1,6 @@
+#+TITLE: Histology Image Classification models for ICIAR
+#+AUTHOR: Eid Alkhaldi
+
+
+Various pretrained models for breast cancer detection in histology images. Achieved 88% accuracy on the ICIAR
+dataset
