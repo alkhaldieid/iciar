@@ -2,5 +2,13 @@
 #+AUTHOR: Eid Alkhaldi
 
 
-Various pretrained models for breast cancer detection in histology images. Achieved 88% accuracy on the ICIAR
-dataset
+Various pretrained models for breast cancer detection in histology images. 
+
+* Tensorflow V1 Densenet201  trained on the BASH dataset
+ [[./kaggle_nbs/densenet.html]]
+* Tensorflow V2 DenseNet201 on ICIAR
+[[file:tensorflow_V2_iciar.ipynb][tf Version 2]]
+* Train resnext50_32x4d on the IDC dataset using Pytorch
+[[./breast_cancer_neural_network.ipynb]]
+* Train Resnet50 on the IDC dataset using PyTorch
+[[file:resnet50_pytorch.ipynb][Resnet50 training using pytorch]]
