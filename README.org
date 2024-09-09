@@ -1,14 +1,106 @@
-#+TITLE: Histology Image Classification models for ICIAR
-#+AUTHOR: Eid Alkhaldi
+* ICiAR: Image Classification and AI Research Project
+Welcome to the ICiAR project! This repository contains code, datasets, and documentation for research and experimentation in image classification using advanced artificial intelligence (AI) techniques.
 
+** Project Overview
+ICiAR (Image Classification and AI Research) is an initiative to develop innovative solutions for image classification challenges using state-of-the-art deep learning models. The project focuses on building and optimizing Convolutional Neural Networks (CNNs) for tasks such as image recognition and categorization.
 
-Various pretrained models for breast cancer detection in histology images. 
+This repository includes:
+- Source code for model development and training
+- Preprocessing scripts for image datasets
+- Jupyter notebooks for interactive experimentation and model evaluation
+- Documentation for setup and usage
 
-* Tensorflow V1 Densenet201  trained on the BASH dataset
- [[./kaggle_nbs/densenet.html]]
-* Tensorflow V2 DenseNet201 on ICIAR
-[[file:tensorflow_V2_iciar.ipynb][tf Version 2]]
-* Train resnext50_32x4d on the IDC dataset using Pytorch
-[[./breast_cancer_neural_network.ipynb]]
-* Train Resnet50 on the IDC dataset using PyTorch
-[[file:resnet50_pytorch.ipynb][Resnet50 training using pytorch]]
+** Jupyter Notebooks Overview
+1. **breast_cancer_neural_network.ipynb**
+   - This notebook creates and trains a neural network for breast cancer detection using PyTorch. It involves:
+     - **Data Preprocessing**: Loading, organizing, and exploring breast cancer image data.
+     - **Model Training**: Implementing a ResNeXt-50 model and training it using cross-entropy loss and class balancing.
+     - **Evaluation**: Using metrics like accuracy, F1-score, and confusion matrices to evaluate the model’s performance.
+
+2. **resnet50_pytorch.ipynb**
+   - This notebook fine-tunes a ResNet-50 CNN model using PyTorch for image classification. It includes:
+     - **Data Loading**: Preparing the dataset for training and testing using DataLoader.
+     - **Model Training**: Customizing the ResNet-50 model and training it using a learning rate scheduler.
+     - **Evaluation**: Visualizing the training process and assessing the model with performance metrics.
+
+3. **tensorflow_V2_iciar.ipynb**
+   - This notebook utilizes TensorFlow 2.x for image classification tasks, specifically leveraging the DenseNet201 architecture. It includes:
+     - **Data Augmentation**: Using Keras's `ImageDataGenerator` to perform real-time image augmentation and batch processing.
+     - **Model Customization**: Loading a pretrained DenseNet201 model and adding layers to adapt it to the dataset.
+     - **Training and Callbacks**: Training the model with custom learning rate schedules and callbacks like `ModelCheckpoint`.
+     - **Evaluation**: Assessing the model using accuracy, precision, recall, and confusion matrices.
+
+** Features
+- Implementation of deep learning models including CNNs for image classification.
+- Support for custom dataset handling and preprocessing.
+- Jupyter notebooks for interactive development and fine-tuning of models.
+- Model optimization using hyperparameter tuning.
+- Evaluation metrics for accuracy, precision, recall, and F1-score.
+
+** Dependencies
+To run this project, you need the following libraries installed:
+
+- Python 3.x
+- TensorFlow
+- Keras
+- PyTorch
+- NumPy
+- Pandas
+- Matplotlib
+- scikit-learn
+- Jupyter Notebook
+
+You can install the necessary dependencies by running:
+
+#+BEGIN_SRC bash
+pip install -r requirements.txt
+#+END_SRC
+
+** Getting Started
+Follow these steps to set up and run the project on your local machine.
+
+1. Clone the repository:
+#+BEGIN_SRC bash
+git clone https://github.com/alkhaldieid/iciar.git
+cd iciar
+#+END_SRC
+
+2. Install the required dependencies:
+#+BEGIN_SRC bash
+pip install -r requirements.txt
+#+END_SRC
+
+3. Prepare your dataset:
+- Place your dataset in the `data/` directory.
+- Ensure your dataset follows this structure:
+  - `data/train/` for training images
+  - `data/test/` for testing images
+
+4. Run Jupyter Notebooks:
+   Open Jupyter Notebook and start interacting with any of the available notebooks:
+#+BEGIN_SRC bash
+jupyter notebook
+#+END_SRC
+
+5. Train the model:
+You can either use the Jupyter notebook or modify `config.json` for hyperparameters and run:
+#+BEGIN_SRC bash
+python train.py
+#+END_SRC
+
+6. Evaluate the model:
+Evaluate the model’s performance using:
+#+BEGIN_SRC bash
+python evaluate.py
+#+END_SRC
+
+** Contributions
+We welcome contributions! Feel free to open issues or submit pull requests if you'd like to improve the project. Make sure to follow the guidelines outlined in the CONTRIBUTING.md file.
+
+** License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+** Contact
+For more information or questions, feel free to reach out to the project maintainer:
+Eid Alkhaldi – eid.alkhaldi@gmail.com
+
